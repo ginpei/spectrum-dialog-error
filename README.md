@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Errors
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. `npm run start`
+2. Open a dialog by any button
+3. Check warnings and errors in DevTools' console
 
-## Available Scripts
+1 of 4:
 
-In the project directory, you can run:
+```
+webpackHotDevClient.js:138 ./node_modules/@react-spectrum/breadcrumbs/dist/main.css (./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./node_modules/@react-spectrum/breadcrumbs/dist/main.css)
+Warning
 
-### `npm start`
+(1:745) start value has mixed support, consider using flex-start instead
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2 of 4:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+webpackHotDevClient.js:138 ./node_modules/@react-spectrum/breadcrumbs/dist/main.css (./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./node_modules/@react-spectrum/breadcrumbs/dist/main.css)
+Warning
 
-### `npm test`
+(1:83) start value has mixed support, consider using flex-start instead
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3 of 4:
 
-### `npm run build`
+```
+index.js:1 Warning: Legacy context API has been detected within a strict-mode tree.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The old API will be supported in all 16.x releases, but applications using it should migrate to the new version.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please update the following components: Transition
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Learn more about this warning here: https://reactjs.org/link/legacy-context
+    at Transition (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:67566:30)
+    at $c2eed959492fcaa12e5ad56438b32db$export$OpenTransition
+    at div
+    at ProviderWrapper (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21097:5)
+    at ModalProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:8462:5)
+    at I18nProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:4587:5)
+    at $bc3300334f45fd1ec62a173e70ad86$var$Provider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21011:21)
+    at $efa130a588abe47e4415ae0ba92319d4$var$Overlay (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:19488:5)
+    at $e95c536af9708d8f08fc5947c704fa3$var$Modal (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:19731:5)
+    at $b3e9aa84487f353b5d43baaa685254c$var$DialogTriggerBase (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:15839:5)
+    at $b3e9aa84487f353b5d43baaa685254c$var$DialogTrigger (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:15665:5)
+    at DialogButton1
+    at p
+    at div
+    at div
+    at ProviderWrapper (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21097:5)
+    at ModalProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:8462:5)
+    at I18nProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:4587:5)
+    at $bc3300334f45fd1ec62a173e70ad86$var$Provider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21011:21)
+    at App
+```
 
-### `npm run eject`
+4 of 4:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+index.js:1 Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Transition which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+    at div
+    at $facde3dde95c50b545b1ceb8303a7b3d$export$Underlay (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:19720:5)
+    at Transition (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:67566:30)
+    at $c2eed959492fcaa12e5ad56438b32db$export$OpenTransition
+    at div
+    at ProviderWrapper (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21097:5)
+    at ModalProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:8462:5)
+    at I18nProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:4587:5)
+    at $bc3300334f45fd1ec62a173e70ad86$var$Provider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21011:21)
+    at $efa130a588abe47e4415ae0ba92319d4$var$Overlay (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:19488:5)
+    at $e95c536af9708d8f08fc5947c704fa3$var$Modal (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:19731:5)
+    at $b3e9aa84487f353b5d43baaa685254c$var$DialogTriggerBase (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:15839:5)
+    at $b3e9aa84487f353b5d43baaa685254c$var$DialogTrigger (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:15665:5)
+    at DialogButton1
+    at p
+    at div
+    at div
+    at ProviderWrapper (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21097:5)
+    at ModalProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:8462:5)
+    at I18nProvider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:4587:5)
+    at $bc3300334f45fd1ec62a173e70ad86$var$Provider (http://localhost:3000/spectrum-dialog-error/static/js/vendors~main.chunk.js:21011:21)
+    at App
+```
